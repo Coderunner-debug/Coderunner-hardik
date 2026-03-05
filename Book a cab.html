@@ -1,42 +1,101 @@
 <!DOCTYPE html>
+<html>
 <head>
 <title>Book Cab</title>
-<style>
- body {
-background-color: peachpuff;
-}
-.box {
-background-color: lightblue;
-height: 400px;
-width: 300px;
-position: relative;
-border: 3px solid #73AD21;
-border-radius: 10px;
-padding: 50px;
-margin: 20px;
 
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#ffecd2,#fcb69f);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:white;
+    width:350px;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0px 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+label{
+    font-weight:bold;
+    color:#444;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:18px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+input:focus, select:focus{
+    border-color:#ff7e5f;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#ff7e5f;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#eb5e3f;
 }
 
 </style>
 </head>
+
 <body>
-<div class= box>
+
+<div class="box">
+
+<h2>Book Your Cab</h2>
+
 <form>
-<label for="pickup">Pickup Location:</label><br>
-<input type="text" id="pickup" name="pickup"><br>
-<label for="drop">Drop Location:</label><br>
-<input type="text" id="drop" name="drop"><br>
 
-<label for="cars">Choose a car:</label><br>
+<label for="pickup">Pickup Location</label>
+<input type="text" id="pickup" name="pickup" placeholder="Enter pickup location">
 
+<label for="drop">Drop Location</label>
+<input type="text" id="drop" name="drop" placeholder="Enter drop location">
+
+<label for="cars">Choose a car</label>
 <select name="cars" id="cars">
-  <option value="mini">Mini-$100</option>
-  <option value="sedan">Sedan-$150</option>
-  <option value="mercedes">Mercedes-$200</option>
-  <option value="porshe">Porshe-$300</option><br>
-  <input type="submit" value="Book">
+  <option value="mini">Mini - $100</option>
+  <option value="sedan">Sedan - $150</option>
+  <option value="mercedes">Mercedes - $200</option>
+  <option value="porsche">Porsche - $300</option>
 </select>
 
+<button type="submit">Book Cab</button>
+
 </form>
+
+</div>
+
 </body>
 </html>
